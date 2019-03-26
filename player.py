@@ -1,12 +1,16 @@
-import random
+from creature import Creature
 
 
-class Character():
-	def __init__(self, name, health, AC, initiative):
+# class Player(Creature):
+# 	def __init__(self, strength, dexterity, constitution, intelligence, wisdom, charisma, name):
+# 		super().__init__( strength, dexterity, constitution, intelligence, wisdom, charisma)
+# 		self.name = name
+
+class Player(Creature):
+	def __init__(self, name):
+		Creature.__init__(self)
 		self.name = name
-		self.health = health
-		self.AC = AC
-		self.initiative = initiative
+		
 
-	def roll_initiative(self):
-		pass
+	def __repr__(self):
+		return "In Player class"
